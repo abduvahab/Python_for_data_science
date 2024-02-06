@@ -11,7 +11,9 @@ ft_tuple = tuple(new_tuple)
 new_set = list(("Hello","Mulhouse!"))
 ft_set = set(new_set)
 ft_dict["Hello"] = "42Mulhouse!"
+a = 7
 
+print(a)
 
 
 print(ft_list)
