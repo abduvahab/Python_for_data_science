@@ -8,17 +8,21 @@ def slice_me(family:list, start:int, end:int)->list:
 
     return :a new list
     """
-    if(len(family) == 0):
-        raise ValueError(" the list is empty")
+    try:
         
-    for e in family:
-        assert isinstance(e, list), "the argumect has not list element"
-    len_list = len(family[0])
-    if not all(len(e) == len_list for e in family):
-        raise ValueError("the lists are not the same size")
-    new_family = np.array(family)
-    print("My shape is:", new_family.shape)
-    slice_list = new_family[start:end]
-    print("My new shape is:", slice_list.shape)
-    return slice_list.tolist()
-    
+        if(len(family) == 0):
+            raise ValueError(" the list is empty")
+            
+        for e in family:
+            if not isinstance(e, list):
+                raise ValueError("the argumect has not list element")
+        len_list = len(family[0])
+        if not all(len(e) == len_list for e in family):
+            raise ValueError("the lists are not the same size")
+        new_family = np.array(family)
+        print("My shape is:", new_family.shape)
+        slice_list = new_family[start:end]
+        print("My new shape is:", slice_list.shape)
+        return slice_list.tolist()
+    except ValueError  as e:
+        print(e)
