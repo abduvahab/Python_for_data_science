@@ -31,7 +31,7 @@ def main():
         ax.plot(years[condition], data_belgium, label="Belgium", color="blue")
         ax.set_title("Population Projections")
         ax.set_xlabel("Year")
-        ax.set_ylabel("Population")
+        ax.set_ylabel("Population") 
         ax.legend(loc="lower right")
         x_ticks = years[condition][::40]
         ax.set_xticks(x_ticks)

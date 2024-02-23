@@ -19,7 +19,7 @@ def main():
         ax.set_ylabel("Life Expectancy")
         ax.set_xticks(ticks)
         ax.legend()
-        ax.grid(True)
+        # ax.grid(True)
         plt.show()
     except Exception as e:
         print(e)
