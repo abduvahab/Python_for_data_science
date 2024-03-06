@@ -9,7 +9,7 @@ there are five project in this big project :
 
   python -  datatable
 
-  python - object orient class
+  python - object orient programming
 
   python- data orient design 
 
